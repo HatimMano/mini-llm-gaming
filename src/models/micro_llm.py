@@ -4,7 +4,7 @@ import torch.nn as nn
 from .base_model import BaseLLM
 from .components.embeddings import TokenEmbedding
 from .components.attention import MultiHeadAttention
-from .components.ffn import FeedForwardNetwork
+from .components.ffn import FeedForward
 
 class TransformerBlock(nn.Module):
     """Bloc transformer pour MicroLLM"""
@@ -13,7 +13,7 @@ class TransformerBlock(nn.Module):
         self.ln1 = nn.LayerNorm(config.d_model, bias=False)
         self.attention = MultiHeadAttention(config)
         self.ln2 = nn.LayerNorm(config.d_model, bias=False)
-        self.ffn = FeedForwardNetwork(config)
+        self.ffn = FeedForward(config)
     
     def forward(self, x: torch.Tensor, **kwargs) -> torch.Tensor:
         # Attention avec connexion résiduelle

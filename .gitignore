@@ -1,0 +1,20 @@
+# Fichiers système et IDE
+.DS_Store          # Fichiers macOS
+.idea/             # Dossier JetBrains (WebStorm, PyCharm...)
+.vscode/           # Config VS Code
+*.swp              # Fichiers temporaires Vim
+
+# Dépendances et builds
+node_modules/      # Dépendances JavaScript
+__pycache__/       # Cache Python
+*.pyc              # Fichiers compilés Python
+.env               # Variables d'environnement
+dist/              # Dossiers de build
+build/
+
+# Fichiers JSON (si vous voulez tous les exclure)
+*.json
+# OU pour exclure seulement certains JSON :
+# !important_config.json  # Garde ce fichier spécifiquevenv/
+*.dylib
+ttt_dataset_10k.json

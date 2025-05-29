@@ -1,0 +1,33 @@
+mini-llm-gaming/
+├── config/
+│   ├── model_configs.yaml      # Architectures de tous les modèles
+│   ├── training_configs.yaml   # Hyperparamètres par phase
+│   └── distillation_configs.yaml
+├── src/
+│   ├── data/
+│   │   ├── parsers.py         # PGN/Poker parsers
+│   │   ├── tokenizer.py       # Gaming-specific tokenizer
+│   │   └── augmentation.py    # Data augmentation
+│   ├── models/
+│   │   ├── architectures.py   # Toutes les architectures
+│   │   ├── quantization.py    # BitNet implementation
+│   │   └── specialized.py     # Chess/Poker modules
+│   ├── distillation/
+│   │   ├── losses.py          # Multi-objective losses
+│   │   ├── transfer.py        # Knowledge transfer
+│   │   └── progressive.py     # Pipeline orchestration
+│   ├── training/
+│   │   ├── trainer.py         # Main training loop
+│   │   ├── curriculum.py      # Curriculum learning
+│   │   └── schedulers.py      # LR & loss weight scheduling
+│   └── evaluation/
+│       ├── metrics.py         # Gaming-specific metrics
+│       ├── puzzles.py         # Tactical evaluation
+│       └── style.py           # Style similarity
+├── scripts/
+│   ├── prepare_data.py        # Dataset preparation
+│   ├── train_distillation.py  # Main training script
+│   └── evaluate.py            # Evaluation suite
+└── notebooks/
+    ├── exploration.ipynb      # Data analysis
+    └── ablations.ipynb        # Ablation studies

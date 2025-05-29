@@ -1,0 +1,47 @@
+├── README.md
+├── config
+│   ├── __init__.py
+│   ├── micro_config.py
+│   ├── nano_config.py
+│   └── ttt_config.py
+├── data
+│   └── ttt_dataset_generator.py
+├── examples
+│   ├── benchmark_models.py
+│   ├── create_micro_model.py
+│   ├── create_nano_model.py
+│   └── quick_benchmark.py
+├── requirements.txt
+├── scripts
+│   ├── measure_inference.py
+│   └── profile_memory.py
+├── setup.py
+├── src
+│   ├── __init__.py
+│   ├── inference
+│   │   ├── __init__.py
+│   │   ├── batch_processor.py
+│   │   └── engine.py
+│   ├── models
+│   │   ├── __init__.py
+│   │   ├── base_model.py
+│   │   ├── components
+│   │   │   ├── __init__.py
+│   │   │   ├── attention.py
+│   │   │   ├── embeddings.py
+│   │   │   ├── ffn.py
+│   │   │   ├── quantization.py
+│   │   │   └── rope.py
+│   │   ├── micro_llm.py
+│   │   └── nano_llm.py
+│   └── utils
+│       ├── __init__.py
+│       ├── memory_profiler.py
+│       ├── model_utils.py
+│       └── param_counter.py
+├── tests
+│   ├── __init__.py
+│   ├── test_components.py
+│   ├── test_models.py
+│   └── test_quantization.py
+└── ttt_dataset_10k.json
